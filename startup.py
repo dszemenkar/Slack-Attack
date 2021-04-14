@@ -6,15 +6,15 @@ import pyperclip as pc
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import logger
+import creds
 
-chromedriver = '/Users/davidszemenkar/Documents/robo-jon/chromedriver'
-b = webdriver.Chrome(chromedriver)
+chromedriver = '/home/david/Slack-Attack/chromedriver'
+b = webdriver.Chrome(executable_path=chromedriver)
 b.get("https://app.slack.com/client/TDF6VC50W/CDD3LQBNU")
 
-username = "myusername"
-email = "myemail"
-password = "password"
-
+username = creds.username
+email = creds.email
+password = creds.password
 
 def Tab():
     ag.press('tab')
@@ -34,43 +34,26 @@ def Activate():
     time.sleep(1)
 
 def Login():
-    time.sleep(25)
+    time.sleep(5)
     Tab()
     Enter()
     Tab()
     logger.WriteLog('Try to login')
-    for letter in "capvxjtechteam":
-        ag.press(letter)
+    ag.typewrite("capvxjtechteam", interval=0.3)
     Enter()
-    time.sleep(15)
-    for letter in username:
-        ag.press(letter)
+    time.sleep(5)
+    ag.typewrite(username, interval=0.5)
     pc.copy('@')
     ag.hotkey('ctrl', 'v')
-    for letter in email:
-        ag.press(letter)
+    ag.typewrite(email, interval=0.3)
     Tab()
-    for letter in password:
-        ag.press(letter)
+    ag.typewrite(password, interval=0.3)
     Enter()
     time.sleep(20)
 
 def SendMessage(message):
     i = 0
-    #while i < 10:
-    #    Tab()
-     #   i = i + 1
-    for letter in message:
-        if letter == 'å':
-            pc.copy('å')
-            ag.hotkey('ctrl', 'v')
-        if letter == 'ä':
-            pc.copy('ä')
-            ag.hotkey('ctrl', 'v')
-        if letter == 'ö':
-            pc.copy('ö')
-            ag.hotkey('ctrl', 'v')
-        ag.press(letter)
+    ag.typewrite(message, interval=0.3)
     Enter()
 
 def EndSession():
