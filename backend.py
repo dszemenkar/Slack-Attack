@@ -8,13 +8,14 @@ def connect():
     conn=sqlite3.connect("robot.db")
     cur=conn.cursor()
     cur.execute("CREATE TABLE IF NOT EXISTS messages (id INTEGER PRIMARY KEY, message text, created text)")
+    cur.execute("CREATE TABLE IF NOT EXISTS logs (id INTEGER PRIMARY KEY, log text, created text)")
     conn.commit()
     conn.close()
 
-def insert(message):
+def insert(table, message):
     conn=sqlite3.connect("robot.db")
     cur=conn.cursor()
-    cur.execute("INSERT INTO messages VALUES (NULL,?,?)",(message,getCreated()))
+    cur.execute("INSERT INTO " + table + " VALUES (NULL,?,?)",(message,getCreated()))
     conn.commit()
     conn.close()
 

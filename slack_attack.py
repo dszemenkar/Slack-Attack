@@ -40,7 +40,7 @@ message = ComposeMessage()
 
 startup.SendMessage(message)
 
-backend.insert(message)
+backend.insert("messages", message)
 
 time.sleep(10)
 startup.EndSession()
