@@ -3,7 +3,7 @@
 import datetime
 import logger
 
-weekDaysMapping = ("Monday. ","Tuesday. ","Wednesday. or nedförsbacke as it is called in Swedish! ","Thursday. ","the best day of the week, also known as Friday, Friyay or D Day. ","Saturday. ","Sunday. ")
+weekDaysMapping = ("Monday. ","Tuesday. ","Wednesday, or nedförsbacke as it is called in Swedish! ","Thursday. ","the best day of the week, also known as Friday, Friyay or D Day. ","Saturday. ","Sunday. ")
 
 def GetToday():
     logger.WriteLog('Getting todays day')

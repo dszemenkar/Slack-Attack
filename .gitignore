@@ -1,3 +1,6 @@
 logs.txt
 debug.log
 creds.py
+chromedriver*
+.DS_Store
+__pycache__

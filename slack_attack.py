@@ -10,6 +10,8 @@ import startup
 import web
 import day
 import logger
+
+import backend
     
 def OpenTxtFile(filepath):
     logger.WriteLog('Opening txt file: ' + filepath)
@@ -36,6 +38,8 @@ startup.Login()
 message = ComposeMessage()
 
 startup.SendMessage(message)
+
+backend.insert(message)
 
 time.sleep(10)
 startup.EndSession()
