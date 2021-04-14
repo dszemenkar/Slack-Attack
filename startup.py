@@ -47,9 +47,11 @@ def Login():
     ag.hotkey('ctrl', 'v')
     ag.typewrite(email, interval=0.3)
     Tab()
-    ag.typewrite(password, interval=0.3)
+    pc.copy(password)
+    ag.hotkey('ctrl', 'v')
+    #ag.typewrite(password, interval=0.3)
     Enter()
-    time.sleep(20)
+    time.sleep(30)
 
 def SendMessage(message):
     i = 0
