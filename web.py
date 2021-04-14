@@ -78,3 +78,13 @@ def GetTodaysWeather():
         wstr = " I haven't found out about the weather today. Unable to look out the window. Who placed me here? "
     return wstr
 
+def GetDailyYoutubeLink():
+    res = requests.get('http://www.randomvideogenerator.com/')
+    soup = bs4.BeautifulSoup(res.text, 'html.parser')
+    tag = soup.select('#video > iframe')[0]['src']
+    intro = "\n\nFeel free to check out this random youtube video to kickstart your day!: "
+    try:
+        ytLink = intro + tag + "\n\n"
+    except:
+        ytLink = "Youtube did not have any cool videos today, check back again tomorrow."
+    return ytLink
