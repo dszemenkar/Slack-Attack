@@ -27,8 +27,9 @@ def ComposeMessage():
     end = OpenTxtFile('end')
     regards = OpenTxtFile('regards')
     name = OpenTxtFile('name')
+    space = "\n\n"
 
-    message = salute + welcome + day.CheckSpecialDays() + day.GetToday() + web.GetTodaysDay() + web.GetTodaysWeather() + web.ThisDayInHistory() + web.DidYouKnow() + web.UselessInformation() + day.CountdownChristmas() + end + regards + name
+    message = salute + welcome + day.CheckSpecialDays() + day.GetToday() + space + web.GetTodaysDay() + web.GetTodaysWeather() + web.ThisDayInHistory() + web.DidYouKnow() + web.UselessInformation() + day.CountdownChristmas() + end + regards + name
     logger.WriteLog('Sending the message')
     return message
 

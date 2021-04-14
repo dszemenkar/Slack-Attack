@@ -33,27 +33,25 @@ def Activate():
     time.sleep(1)
 
 def Login():
-    time.sleep(5)
+    time.sleep(10)
     Tab()
     Enter()
     Tab()
     logger.WriteLog('Try to login')
-    ag.typewrite("capvxjtechteam", interval=0.3)
+    ag.typewrite(creds.teamname, interval=0.3)
     Enter()
-    time.sleep(5)
-    ag.typewrite(username, interval=0.5)
+    time.sleep(10)
+    ag.typewrite(username, interval=0.3)
     pc.copy('@')
     ag.hotkey('ctrl', 'v')
     ag.typewrite(email, interval=0.3)
     Tab()
     pc.copy(password)
     ag.hotkey('ctrl', 'v')
-    #ag.typewrite(password, interval=0.3)
     Enter()
     time.sleep(30)
 
 def SendMessage(message):
-    i = 0
     ag.typewrite(message, interval=0.3)
     Enter()
 
