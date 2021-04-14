@@ -25,7 +25,6 @@ def UselessInformation():
     res = requests.get('https://www.kickassfacts.com/fact-of-the-day/')
     soup = bs4.BeautifulSoup(res.text, 'html.parser')
     day = soup.select("#post-39039 > div.share-container > div > div > ol > li:nth-child(" + str(child) + ")")
-    print(day[0].text)
     try:
         size = len(day[0].text)
         mod_string = day[0].text[:size - 9]
