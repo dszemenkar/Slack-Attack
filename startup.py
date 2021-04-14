@@ -8,8 +8,7 @@ from selenium.webdriver.common.keys import Keys
 import logger
 import creds
 
-chromedriver = '/home/david/Slack-Attack/chromedriver'
-b = webdriver.Chrome(executable_path=chromedriver)
+b = webdriver.Chrome(executable_path=creds.driver)
 b.get("https://app.slack.com/client/TDF6VC50W/CDD3LQBNU")
 
 username = creds.username
