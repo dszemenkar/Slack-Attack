@@ -6,6 +6,9 @@ from robot.messages.forms import MessageForm
 
 messages = Blueprint('messages', __name__)
 
+def getCreated():
+    return datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
+
 @messages.route('/message/create', methods=['GET', 'POST'])
 #@login_required
 def create():
@@ -15,8 +18,9 @@ def create():
 	#	abort(403)
 
 	if form.validate_on_submit():
+		from datetime import datetime
 		message = Message(message=form.message.data,
-							)
+						  created=getCreated())
 		#db.session.add(message)
 		#db.session.commit()
 		return redirect(url_for('core.sent'))
