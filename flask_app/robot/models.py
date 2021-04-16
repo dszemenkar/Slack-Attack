@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from flask_app import db
+from robot import db
 from datetime import datetime
 import json
 import requests

@@ -1,11 +1,11 @@
 from flask import render_template, session, request, Blueprint
-from flask_app.models import Messages
+from robot.models import Message
 import uuid
 
 core = Blueprint('core', __name__)
 
 @core.route('/')
 def index():
-	messages = Messages.query.all()
+	messages = Message.query.all()
 
 	return render_template('index.html', messages=messages)
