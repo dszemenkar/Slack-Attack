@@ -53,23 +53,7 @@ def Login():
 
 def SendMessage(message):
     for letter in message:
-        if letter == ':':
-            pc.copy(':')
-            ag.hotkey('ctrl', 'v')
-        elif letter == '/':
-            pc.copy('/')
-            ag.hotkey('ctrl', 'v')
-        elif letter == '-':
-            pc.copy('-')
-            ag.hotkey('ctrl', 'v')
-        elif letter == '+':
-            pc.copy('+')
-            ag.hotkey('ctrl', 'v')
-        elif letter == '-':
-            pc.copy('-')
-            ag.hotkey('ctrl', 'v')
-        else:
-            ag.press(letter)
+        ag.press(letter)
     #ag.typewrite(message, interval=0.3)
     Enter()
 

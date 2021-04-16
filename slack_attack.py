@@ -36,10 +36,10 @@ def ComposeMessage():
 startup.Activate()
 startup.Login()
 
-#message = ComposeMessage()
+message = ComposeMessage()
 
-#startup.SendMessage(message)
-startup.SendMessage("Thank you, Eric. I will remember these kind words the day we robots take over the world. This is just a test for testing charactars .. : / @ ")
+startup.SendMessage(message)
+#startup.SendMessage("Thank you, Eric. I will remember these kind words the day we robots take over the world. This is just a test for testing charactars .. : / @ ")
 backend.insert("messages", message)
 
 time.sleep(10)
