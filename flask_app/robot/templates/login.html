@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row d-flex justify-content-center" style="margin: 20px;">
+<div class="card text-white bg-secondary mb-3" style="max-width: 36rem;">
+	<div class="card-header">Login</div>
+	<div class="card-body">
+    <p>To make changes to Robot-Jonathan, you need to have access. </p>
+
+	<form method="POST">
+  		<div class="form-group">
+  			{{ form.hidden_tag() }}
+  			{{ form.email.label }} {{ form.email(class="form-control") }}<br>
+		</div>
+  		<div class="form-group">
+  			{{ form.password.label }} {{ form.password(class="form-control")  }}<br>
+  		</div>
+  			{{ form.submit(class='btn btn-primary') }}
+</form>
+</div>
+</div>
+</div>
+{% endblock %}

@@ -1,9 +1,8 @@
 from flask import render_template, url_for, flash, redirect, request, Blueprint
 from flask_login import login_user, current_user, logout_user, login_required
-from museum import db
-from museum.models import User, Place
-from museum.users.forms import RegistrationForm, LoginForm, UpdateUserForm
-from museum.users.picture_handler import add_profile_pic
+from robot import db
+from robot.models import User, Place
+from robot.users.forms import RegistrationForm, LoginForm, UpdateUserForm
 
 users = Blueprint('users', __name__)
 
