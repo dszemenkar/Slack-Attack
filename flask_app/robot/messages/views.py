@@ -27,7 +27,7 @@ def create():
 		return redirect(url_for('core.sent'))
 	return render_template('send_message.html', form=form)
 
-@messages.route('messages/<int:message_id>')
+@messages.route('/messages/<int:message_id>')
 def message(message_id):
 	message = Message.query.get_or_404(message_id)
 	return render_template('message.html', message=message)
