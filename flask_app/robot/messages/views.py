@@ -6,7 +6,7 @@ from robot.messages.forms import MessageForm
 
 messages = Blueprint('messages', __name__)
 
-@stories.route('/message/create', methods=['GET', 'POST'])
+@messages.route('/message/create', methods=['GET', 'POST'])
 #@login_required
 def create():
 	form = MessageForm()
