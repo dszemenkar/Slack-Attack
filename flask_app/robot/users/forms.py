@@ -30,7 +30,6 @@ class RegistrationForm(FlaskForm):
 class UpdateUserForm(FlaskForm):
 	email = StringField('Email', validators=[DataRequired(), Email()])
 	username = StringField('Username', validators=[DataRequired()])
-	picture = StringField('Update profile picture')
 	submit = SubmitField('Update profile')
 
 	def check_email(self, field):

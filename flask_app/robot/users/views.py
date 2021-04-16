@@ -7,7 +7,6 @@ from robot.users.forms import RegistrationForm, LoginForm, UpdateUserForm
 users = Blueprint('users', __name__)
 
 @users.route("/register", methods=['GET', 'POST'])
-@login_required
 def register():
 	form = RegistrationForm()
 
