@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="d-flex align-content-center flex-wrap">
+
+  {% for message in messages %}
+  <div class="card mb-3" style="max-width: 450px; margin: 5px;">
+    <h3 class="card-header">{{message}}</h3>
+<card-body>
+    
+<div class="d-flex">
+
+</div>
+    </card-body>
+
+  </div>
+
+	{% endfor %}
+
+</div>
+
+{% endblock %}

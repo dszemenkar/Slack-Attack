@@ -3,4 +3,4 @@ debug.log
 creds.py
 chromedriver*
 .DS_Store
-__pycache__
+__pycache__*

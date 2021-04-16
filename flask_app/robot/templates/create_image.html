@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron" style="margin: 10px; max-width: 38rem;">
+    
+    <p class="lead">Send message</p>
+
+  <form method="POST" action="" enctype="multipart/form-data">
+  		
+			{{ form.hidden_tag() }}
+    <div class="form-group">
+  			{{ form.url.label(class='form-group') }} {{ form.url(class='form-control') }}<br>
+		</div>
+    <div class="form-group">
+        {{ form.text.label(class='form-group')  }} {{ form.text(class="form-control")  }}<br>
+      </div>
+<div class="form-group">
+  			{{ form.submit(class='btn btn-primary') }}
+        </div>
+</form>
+ </div>
+{% endblock %}
