@@ -1,4 +1,5 @@
 from flask import render_template, session, request, Blueprint
+from flask_login import current_user, login_required
 from robot.models import Message
 import uuid
 
