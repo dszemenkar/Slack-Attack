@@ -9,3 +9,7 @@ def index():
 	messages = Message.query.all()
 
 	return render_template('index.html', messages=messages)
+
+@core.route('/sent')
+def sent():
+	return render_template('sent.html')
