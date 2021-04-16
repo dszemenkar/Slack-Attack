@@ -52,7 +52,25 @@ def Login():
     time.sleep(30)
 
 def SendMessage(message):
-    ag.typewrite(message, interval=0.3)
+    for letter in message:
+        if letter == ':':
+            pc.copy(':')
+            ag.hotkey('ctrl', 'v')
+        elif letter == '/':
+            pc.copy('/')
+            ag.hotkey('ctrl', 'v')
+        elif letter == '-':
+            pc.copy('-')
+            ag.hotkey('ctrl', 'v')
+        elif letter == '+':
+            pc.copy('+')
+            ag.hotkey('ctrl', 'v')
+        elif letter == '-':
+            pc.copy('-')
+            ag.hotkey('ctrl', 'v')
+        else:
+            ag.press(letter)
+    #ag.typewrite(message, interval=0.3)
     Enter()
 
 def EndSession():
