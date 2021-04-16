@@ -6,6 +6,10 @@ from datetime import datetime
 import json
 import requests
 
+@login_manager.user_loader
+def load_user(user_id):
+	return User.query.get(user_id)
+
 class Message(db.Model):
 	__tablename__ = 'messages'
 
