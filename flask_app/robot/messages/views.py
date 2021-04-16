@@ -30,4 +30,4 @@ def create():
 @messages.route('/<int:message_id>')
 def message(message_id):
 	message = Message.query.get_or_404(message_id)
-	return render_template('place.html', message=message)
+	return render_template('message.html', message=message)
