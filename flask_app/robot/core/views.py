@@ -15,5 +15,5 @@ def sent():
 
 @core.route('/messages')
 def messages():
-	messages = Message.query.all()
+	messages = Message.query.order_by(Message.id.desc())
 	return render_template('messages.html', messages=messages)

@@ -13,8 +13,7 @@
   <tbody>
     {% for items in messages %}
     <tr>
-      <th scope="row"></th>
-      <td>{{items.id}}</td>
+      <th scope="row">{{items.id}}</th>
       <td>{{items.created}}</td>
       <td>{{items.message | truncate(80) }}</td>
       <td><a href="{{ url_for('messages.message', message_id=items.id) }}" class="btn btn-outline-light">Read message</a></td>
