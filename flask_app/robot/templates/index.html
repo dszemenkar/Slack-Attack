@@ -1,18 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="d-flex align-content-center flex-wrap">
+<div class="d-flex align-content-center">
 
   {% for message in messages %}
-  <div class="card mb-3" style="max-width: 450px; margin: 5px;">
-    <h3 class="card-header">{{message}}</h3>
-<card-body>
-    
-<div class="d-flex">
+  <div class="card border-light mb-3" style="max-width: 60rem;">
+  <div class="card-header">Message from: {{created}}</div>
+  <div class="card-body">
 
-</div>
-    </card-body>
-
+    <p class="card-text">{{message}}</p>
   </div>
+</div>
 
 	{% endfor %}
 
