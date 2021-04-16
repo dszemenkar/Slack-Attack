@@ -9,6 +9,7 @@ import time
 import web
 import day
 import logger
+import backend
 
 def OpenTxtFile(filepath):
     logger.WriteLog('Opening txt file: ' + filepath)
@@ -33,6 +34,7 @@ def ComposeMessage():
 
 
 message = ComposeMessage()
+#backend.insert("messages", message)
 
 print(message)
 
