@@ -15,23 +15,14 @@
     <tr>
       <th scope="row"></th>
       <td>{{items.created}}</td>
-      <td>{{items.message | truncate(10) }}</td>
-      <td>Read message</td>
+      <td>{{items.message | truncate(80) }}</td>
+      <td><a href="{{ url_for('messages.message', message_id=items.id) }}" class="btn btn-outline-dark">Read message</a></td>
     </tr>
     {% endfor %}
   </tbody>
 </table>
 
-  {% for items in messages %}
-  <div class="card border-light mb-6">
-  <div class="card-header">Message from: {{items.created}}</div>
-  <div class="card-body">
 
-    <p class="card-text">{{items.message}}</p>
-  </div>
-</div>
-
-	{% endfor %}
 
 </div>
 

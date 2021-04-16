@@ -26,3 +26,8 @@ def create():
 		#db.session.commit()
 		return redirect(url_for('core.sent'))
 	return render_template('send_message.html', form=form)
+
+@messages.route('/<int:message_id>')
+def message(message_id):
+	message = Message.query.get_or_404(message_id)
+	return render_template('place.html', message=message)
