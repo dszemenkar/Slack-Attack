@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="d-flex align-content-center">
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Time</th>
+      <th scope="col">Message</th>
+      <th scope="col">Read</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for items in messages %}
+    <tr>
+      <th scope="row"></th>
+      <td>{{items.id}}</td>
+      <td>{{items.created}}</td>
+      <td>{{items.message | truncate(80) }}</td>
+      <td><a href="{{ url_for('messages.message', message_id=items.id) }}" class="btn btn-outline-light">Read message</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+
+</div>
+
+{% endblock %}

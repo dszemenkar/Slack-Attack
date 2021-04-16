@@ -7,10 +7,13 @@ core = Blueprint('core', __name__)
 
 @core.route('/')
 def index():
-	messages = Message.query.all()
-
-	return render_template('index.html', messages=messages)
+	return render_template('index.html')
 
 @core.route('/sent')
 def sent():
 	return render_template('sent.html')
+
+@core.route('/messages')
+def messages():
+	messages = Message.query.all()
+	return render_template('messages.html', messages=messages)
