@@ -2,12 +2,12 @@
 {% block content %}
 <div class="d-flex align-content-center">
 
-  {% for message in messages %}
+  {% for items in messages %}
   <div class="card border-light mb-3" style="max-width: 60rem;">
-  <div class="card-header">Message from: {{created}}</div>
+  <div class="card-header">Message from: {{items.reated}}</div>
   <div class="card-body">
 
-    <p class="card-text">{{message}}</p>
+    <p class="card-text">{{items.message}}</p>
   </div>
 </div>
 
