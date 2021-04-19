@@ -11,7 +11,7 @@ def getCreated():
     return datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
 
 @messages.route('/messages/create', methods=['GET', 'POST'])
-@login_required
+#@login_required
 def create():
 	form = MessageForm()
 

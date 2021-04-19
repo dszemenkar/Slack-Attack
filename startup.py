@@ -53,8 +53,11 @@ def Login():
 
 def SendMessage(message):
     for letter in message:
-        ag.press(letter)
-    #ag.typewrite(message, interval=0.3)
+        if letter = '/':
+            pc.copy('/')
+            ag.hotkey('ctrl', 'v')
+        else:
+            ag.press(letter)
     Enter()
 
 def EndSession():
