@@ -34,7 +34,7 @@ def ComposeMessage():
 
 
 message = ComposeMessage()
-#backend.insert("messages", message)
+backend.insert("messages", message)
 
 print(message)
 

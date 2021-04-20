@@ -42,7 +42,7 @@ def DidYouKnow():
         soup = bs4.BeautifulSoup(res.text, 'html.parser')
         try:
             day = soup.select("#mp-dyk > ul > li:nth-child(" + str(child) + ")")
-            dayStr = 'Did you know that' + day[0].text + ' '
+            dayStr = 'Did you know' + day[0].text + ' '
         except:
             logger.WriteLog('Did not fetch did-you-know')
             dayStr = ""
