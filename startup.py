@@ -53,7 +53,7 @@ def Login():
 
 def SendMessage(message):
     for letter in message:
-        if letter = '/':
+        if letter == '/':
             pc.copy('/')
             ag.hotkey('ctrl', 'v')
         else:

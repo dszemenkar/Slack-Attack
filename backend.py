@@ -9,7 +9,7 @@ def connect():
     cur=conn.cursor()
     cur.execute("CREATE TABLE IF NOT EXISTS messages (id INTEGER PRIMARY KEY, message text, created text)")
     cur.execute("CREATE TABLE IF NOT EXISTS logs (id INTEGER PRIMARY KEY, log text, created text)")
-    cur.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, email text, username text, password text, admin INTEGER")
+    cur.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, email text, username text, password text, admin INTEGER)")
     conn.commit()
     conn.close()
 
